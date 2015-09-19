@@ -1,0 +1,15 @@
+syntax: glob
+docs/_build
+.svnignore
+.DS_Store
+.svn
+.git
+Thumbs.db
+.directory
+*.swp
+*.egg-info
+*~
+*-
+__pycache__
+*.pyc
+*.kpf
