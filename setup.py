@@ -30,7 +30,7 @@ setup(
     packages=["stua"],
     name="stua",
     version=stua.__version__,
-    description = io.open(os.path.join(os.path.dirname(__file__), "README.md"), "rU").read(),
+    description = io.open(os.path.join(os.path.dirname(__file__), "README.md"), "rt").read(),
     long_description="",
     author=stua.__author__,
     author_email=stua.__author_email__,
