@@ -92,8 +92,7 @@ class Command(BaseCommand):
 
     def parse(self, parser, command, args):
         options = vars(parser.parse_args(args))
-        output = self.handle(command, options=options)
-        return output
+        return self.handle(command, options=options)
 
 
 class ArgumentCommand(Command):
@@ -109,5 +108,4 @@ class ArgumentCommand(Command):
     def parse(self, parser, command, args):
         options, args = parser.parse_known_args(args)
         options = vars(options)
-        output = self.handle(command, options=options, args=args)
-        return output
+        return self.handle(command, options=options, args=args)
