@@ -41,7 +41,7 @@ class BaseCommand(object):
     def execute(self, command, args):
         return self.handle(command, args=args)
 
-    def __init__(self, stdout=None, stderr=None, no_color=False):
+    def __init__(self, stdout=None, stderr=None):
         self.stdout = stdout or sys.stdout
         self.stderr = stderr or sys.stderr
 
