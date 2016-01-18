@@ -47,9 +47,8 @@ class BaseCommand(object):
 
     def run(self, argv):
         command, args = argv[0], argv[1:]
-        output = self.execute(command, args)
-        if output:
-            self.stdout.write(output)
+        status = self.execute(command, args)
+        return 0 if status is None else status
 
 
 class Command(BaseCommand):
