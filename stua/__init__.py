@@ -23,7 +23,7 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 from .version import get_version, HG
 
-VERSION = (0, 1, 1, "final", 0)
+VERSION = (0, 2, 0, "final", 0)
 
 __author__ = "Raffaele Salmaso"
 __author_email__ = "raffaele@salmaso.org"
