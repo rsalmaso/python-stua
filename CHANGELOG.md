@@ -7,6 +7,7 @@
 * convert to pyproject.toml
 * os.system: update signature [breaking change]
 * os.mkdir: update implementation
+* commands: stop converting parsed `options` to dict [breaking change]
 
 ## 0.2.0
 
