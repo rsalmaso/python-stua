@@ -4,6 +4,7 @@
 
 * drop support for python < 3.8
 * format and lint code with ruff
+* convert to pyproject.toml
 
 ## 0.2.0
 
