@@ -5,6 +5,7 @@
 * drop support for python < 3.8
 * format and lint code with ruff
 * convert to pyproject.toml
+* os.system: update signature [breaking change]
 
 ## 0.2.0
 

@@ -40,9 +40,37 @@ def puts(*args):
     sys.stdout.flush()
 
 
-def system(*args, **kwargs):
-    env = kwargs.pop("env", None)
-    return subprocess.call(list(args), env=env)
+def system(
+    args,
+    *,
+    stdin=None,
+    stdout=None,
+    stderr=None,
+    capture_output=False,
+    shell=False,
+    cwd=None,
+    timeout=None,
+    check=False,
+    encoding=None,
+    errors=None,
+    text=None,
+    env=None,
+):
+    kwargs = {
+        "stdin": stdin,
+        "stdout": stdout,
+        "stderr": stderr,
+        "capture_output": capture_output,
+        "shell": shell,
+        "cwd": cwd,
+        "timeout": timeout,
+        "check": check,
+        "encoding": encoding,
+        "errors": errors,
+        "text": text,
+        "env": env,
+    }
+    return subprocess.run([args] if isinstance(args, str) else list(args), **kwargs)
 
 
 def mkdir(config):
