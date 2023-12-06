@@ -1,6 +1,6 @@
 # Changes
 
-## dev
+## 0.3.0
 
 * drop support for python < 3.8
 * format and lint code with ruff

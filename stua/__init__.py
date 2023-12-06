@@ -20,7 +20,7 @@
 
 from .version import get_version, HG
 
-VERSION = (0, 2, 0, "final", 0)
+VERSION = (0, 3, 0, "final", 1)
 
 __author__ = "Raffaele Salmaso"
 __author_email__ = "raffaele@salmaso.org"
