@@ -6,6 +6,7 @@
 * format and lint code with ruff
 * convert to pyproject.toml
 * os.system: update signature [breaking change]
+* os.mkdir: update implementation
 
 ## 0.2.0
 

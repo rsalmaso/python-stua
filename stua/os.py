@@ -20,6 +20,7 @@
 
 from contextlib import contextmanager
 import os
+from pathlib import Path
 import subprocess
 import sys
 
@@ -73,8 +74,9 @@ def system(
     return subprocess.run([args] if isinstance(args, str) else list(args), **kwargs)
 
 
-def mkdir(config):
+def mkdir(path, *, mode=511, parents=True, exist_ok=True):
     """
     create a directory
     """
-    os.system("""mkdir -p "%(dest)s/%(date)s/" """ % {"date": config.tm, "dest": config.dest})
+    path = path if isinstance(path, Path) else Path(path)
+    path.mkdir(mode=mode, parents=parents, exist_ok=exist_ok)
