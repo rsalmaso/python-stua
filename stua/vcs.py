@@ -39,7 +39,7 @@ def get_hg_changeset(filename=None):
 def get_git_changeset(filename=None):
     filename = __file__ if filename is None else filename
     git_log = subprocess.Popen(
-        'git log --pretty=format:%ct --quiet -1 HEAD',
+        "git log --pretty=format:%ct --quiet -1 HEAD",
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         shell=True,
@@ -51,4 +51,4 @@ def get_git_changeset(filename=None):
         timestamp = datetime.datetime.utcfromtimestamp(int(timestamp))
     except ValueError:
         return None
-    return timestamp.strftime('%Y%m%d%H%M%S')
+    return timestamp.strftime("%Y%m%d%H%M%S")

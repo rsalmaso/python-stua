@@ -20,8 +20,8 @@
 
 from contextlib import contextmanager
 import os
-import sys
 import subprocess
+import sys
 
 
 @contextmanager
@@ -35,13 +35,13 @@ def cd(path):
 
 
 def puts(*args):
-    sys.stdout.write(''.join([str(arg) for arg in args]))
-    sys.stdout.write('\n')
+    sys.stdout.write("".join([str(arg) for arg in args]))
+    sys.stdout.write("\n")
     sys.stdout.flush()
 
 
 def system(*args, **kwargs):
-    env = kwargs.pop('env', None)
+    env = kwargs.pop("env", None)
     return subprocess.call(list(args), env=env)
 
 
@@ -49,7 +49,4 @@ def mkdir(config):
     """
     create a directory
     """
-    os.system("""mkdir -p "%(dest)s/%(date)s/" """ % {
-        'date': config.tm,
-        'dest': config.dest,
-    })
+    os.system("""mkdir -p "%(dest)s/%(date)s/" """ % {"date": config.tm, "dest": config.dest})

@@ -21,6 +21,7 @@
 from argparse import ArgumentParser
 import os
 import sys
+
 from . import version
 
 
@@ -49,8 +50,7 @@ class BaseCommand:
 
 
 class Command(BaseCommand):
-    """
-    """
+    """"""
 
     add_help = True
     help = ""
@@ -65,18 +65,10 @@ class Command(BaseCommand):
         return version.get_version()
 
     def create_parser(self, prog_name):
-        return ArgumentParser(
-            prog=os.path.basename(prog_name),
-            add_help=self.add_help,
-            description=self.help or None,
-        )
+        return ArgumentParser(prog=os.path.basename(prog_name), add_help=self.add_help, description=self.help or None)
 
     def default_arguments(self, parser):
-        parser.add_argument(
-            "--version",
-            action="version",
-            version=self.get_version(),
-        )
+        parser.add_argument("--version", action="version", version=self.get_version())
 
     def add_arguments(self, parser):
         pass
@@ -93,8 +85,7 @@ class Command(BaseCommand):
 
 
 class ArgumentCommand(Command):
-    """
-    """
+    """"""
 
     def handle(self, command, options, args):
         """

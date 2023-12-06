@@ -22,14 +22,16 @@
 
 import io
 import os
+
 from setuptools import setup
+
 import stua
 
 setup(
     packages=["stua"],
     name="stua",
     version=stua.__version__,
-    description = io.open(os.path.join(os.path.dirname(__file__), "README.md"), "rt").read(),
+    description=io.open(os.path.join(os.path.dirname(__file__), "README.md"), "rt").read(),
     long_description="",
     author=stua.__author__,
     author_email=stua.__author_email__,
@@ -40,12 +42,11 @@ setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
         "Topic :: Utilities",
         "Development Status :: 4 - Beta",
     ],

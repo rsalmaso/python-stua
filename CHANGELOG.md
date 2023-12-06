@@ -3,6 +3,7 @@
 ## dev
 
 * drop support for python < 3.8
+* format and lint code with ruff
 
 ## 0.2.0
 
